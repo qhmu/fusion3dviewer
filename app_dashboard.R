@@ -28,8 +28,8 @@ ui <- dashboardPage(skin = "black",
                  box(width=6),
                  box()),
         fluidRow(h2('Transcript structure will go here'),
-                 box(width = 12,
-                     img(src='BCR-NTRK2.svg', style="display: block; margin-left: auto; margin-right: auto;"))),
+                 box(width = 12,align="center",imageOutput("plot_as_svg", width = "100%", height = "760px") #img(src='BCR-NTRK2.svg', style="display: block; margin-left: auto; margin-right: auto;"
+                     )),
         fluidRow(
           h2('Protein 3d structure'),
           box(title='', width = 4., solidHeader =TRUE,#status="primary",
@@ -95,6 +95,18 @@ server <- function(input, output, clientData, session) {
       m_zoom_to() 
     
     viewer
+  })
+  
+  output$plot_as_svg <- renderImage({
+    outfile = gsub("pdb",'svg',GFS$FusionPDB[GFS$Fusion==input$inSelect])
+    library(XML)
+    tmp = xmlToList(xmlParse(outfile))
+    w = as.numeric(tmp$.attrs[1])
+    h = as.numeric(tmp$.attrs[2])#/96
+    list(src = normalizePath(outfile),
+         contentType = 'image/svg+xml',
+         width = w, height = h,
+         alt = "My Histogram")
   })
   
 }
