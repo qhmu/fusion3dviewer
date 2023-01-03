@@ -4,7 +4,7 @@ library(shinydashboard)
 library(bio3d)
 library(r3dmol)
 
-setwd("~/Documents/1_github/fusion3dviewer")
+#setwd("~/Documents/1_github/fusion3dviewer")
 GFS = read.delim('www/fusions.list.tsv')
 
 
