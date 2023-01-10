@@ -7,7 +7,7 @@ library(shinythemes)
 # setwd("~/Documents/1_github/fusion3dviewerTest")
 GFS = read.delim('www/fusions.list.tsv')
 
-navbarPage("Gene fusion viewer!",
+navbarPage("3D fusion viewer!",
            theme = shinytheme("flatly"),
            tabPanel("Home",
                     
@@ -27,7 +27,7 @@ navbarPage("Gene fusion viewer!",
                                           h4(tags$hr()),
                                           
                                           
-                                          h4('Gene fusion viwer is the online tool to view the gene fusions.'),
+                                          h4('Gene fusion viwer is the online tool to view the gene fusions in the transcript and 3D protein view.'),
                                           h4("The funciton of the panels are listed as follows."),
                                           tags$ol(
                                             
