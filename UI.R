@@ -18,7 +18,7 @@ navbarPage("3D fusion viewer!",
                                  tabPanel("Introduction", 
                                           
                                           # "This is the home page",
-                                          h1("Gene fusion viewer"),
+                                          h1("3D Gene Fusion Viewer"),
                                           h4(tags$hr()),
                                           
                                           imageOutput('logo', inline = T),
@@ -27,7 +27,7 @@ navbarPage("3D fusion viewer!",
                                           h4(tags$hr()),
                                           
                                           
-                                          h4('Gene fusion viwer is the online tool to view the gene fusions in the transcript and 3D protein view.'),
+                                          h4('3D Gene Fusion Viewer is the online tool to view the gene fusions in the transcript and 3D protein view.'),
                                           h4("The funciton of the panels are listed as follows."),
                                           tags$ol(
                                             
