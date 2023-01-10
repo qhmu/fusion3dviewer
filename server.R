@@ -79,6 +79,6 @@ function(input, output, clientData, session) {
          contentType = 'image/svg+xml',
          width = w, height = h,
          alt = "My Histogram")
-  })
+  }, deleteFile=FALSE)
   
 }
