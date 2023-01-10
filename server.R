@@ -2,8 +2,24 @@ library(shiny)
 library(shinydashboard)
 library(bio3d)
 library(r3dmol)
+library(shinythemes)
+
+GFS = read.delim('www/fusions.list.tsv')
 
 function(input, output, clientData, session) {
+  
+  
+  # render the image
+  
+  output$logo = renderImage({
+    list(src = "./img/logo.png",
+         alt = "logo")}, deleteFile=FALSE)
+  
+  output$fusionWiki = renderImage({
+    list(src = "./img/geneFusionWiki.png",
+         alt = "fusionWiki")}, deleteFile=FALSE)
+  
+  
   observe({
     # Change values for input$inSelect
     s_options = unique(GFS$Fusion[GFS$Group==input$fusion])
