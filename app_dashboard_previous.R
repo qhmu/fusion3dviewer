@@ -4,9 +4,14 @@ library(shinydashboard)
 library(bio3d)
 library(r3dmol)
 
-# setwd("~/Documents/1_github/fusion3dviewerTest")
+<<<<<<< HEAD
+# setwd("~/Documents/1_github/fusion3dviewer")
 
+=======
+#setwd("~/Documents/1_github/fusion3dviewer")
+>>>>>>> e7510e662a936647ac40cb0fcac541425a77426b
 GFS = read.delim('www/fusions.list.tsv')
+
 
 ui <- dashboardPage(skin = "black",
   dashboardHeader(title = "Gene fusion viewer"),
