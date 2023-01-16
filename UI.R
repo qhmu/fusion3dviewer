@@ -6,6 +6,8 @@ library(shinythemes)
 
 # setwd("~/Documents/1_github/fusion3dviewerTest")
 GFS = read.delim('www/fusions.list.tsv')
+pdbSvgMergeDfNona = read.delim('pdbSvgMergeDfNona.csv', sep = ',')
+GFS = GFS[GFS$Fusion %in% pdbSvgMergeDfNona$name,]
 
 navbarPage("3D fusion viewer!",
            theme = shinytheme("flatly"),

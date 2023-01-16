@@ -5,6 +5,8 @@ library(r3dmol)
 library(shinythemes)
 
 GFS = read.delim('www/fusions.list.tsv')
+pdbSvgMergeDfNona = read.delim('pdbSvgMergeDfNona.csv', sep = ',')
+GFS = GFS[GFS$Fusion %in% pdbSvgMergeDfNona$name,]
 
 function(input, output, clientData, session) {
   
@@ -23,6 +25,9 @@ function(input, output, clientData, session) {
   observe({
     # Change values for input$inSelect
     s_options = unique(GFS$Fusion[GFS$Group==input$fusion])
+    
+    
+    
     updateSelectInput(session, "inSelect",
                       label = "Suboption",
                       choices = s_options)
