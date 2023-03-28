@@ -29,22 +29,33 @@ navbarPage("3D fusion viewer!",
                                           h4(tags$hr()),
                                           
                                           
-                                          h4('3D Gene Fusion Viewer is the online tool to view the gene fusions in the transcript and 3D protein view.'),
+                                          p(style="text-align: justify;font-size:18px;line-height:20px;", 
+                                            '3D Gene Fusion Viewer is the online tool to view the gene fusions in the transcript and 3D protein view.'),
+                                          
+                                          p(style="text-align: justify;font-size:18px;line-height:20px;",
+                                                 ('Our 3D Gene Fusion Viewer is powered by advanced data analytics and visualization algorithms, which allow you to quickly and easily explore complex data sets and identify patterns and trends in 3D gene fusion occurrence and function. Whether you are a researcher, clinician, or diagnostician, our gene fusion visualization panel can provide you with valuable insights into the underlying mechanisms of disease and potential therapeutic targets.')),
+                                          h4('So why not try our gene fusion visualization panel today and discover a whole new world of genomic insights and discoveries!'),
+                                          
+                                          h4(tags$hr()),
+                                          
                                           h4("The funciton of the panels are listed as follows."),
                                           tags$ol(
                                             
                                             h3(tags$li('Introduction')),
-                                            h4('It is the introduction and the summary of the gene fusion viewer. You could find the cohort and the collection of the gene fusions in this page. The basic guidance will also help you to utilize this tool to visulize the gene fusions.'),
+                                            p(style="text-align: justify;font-size:18px;line-height:20px;",'It is the introduction and the summary of the gene fusion viewer. You could find the cohort and the collection of the gene fusions in this page. The basic guidance will also help you to utilize this tool to visulize the gene fusions.'),
                                             
                                             h3(tags$li('Fusions')),
                                             h4(tags$strong("MAIN TOOL HERE!")),
-                                            h4('The main tools of the gene fusion viewer. You could explore all the collected gene fusions by the transcript view and the 3D protein shape view. For the transcript view, the transcripts of two genes and the fusion genes are visulized. For the 3D protein shape view, the 3D structure of the proteins are displayed with 3D viewer.'),
+                                            p(style="text-align: justify;font-size:18px;line-height:20px;",
+                                              'The main tools of the gene fusion viewer. You could explore all the collected gene fusions by the transcript view and the 3D protein shape view. For the transcript view, the transcripts of two genes and the fusion genes are visulized. For the 3D protein shape view, the 3D structure of the proteins are displayed with 3D viewer.'),
                                             
                                             h3(tags$li('Cases')),
-                                            h4('The collected cased in our cohort. The clinical information of the patients is visualized here for you to explore.'),
+                                            p(style="text-align: justify;font-size:18px;line-height:20px;",
+                                              'The collected cased in our cohort. The clinical information of the patients is visualized here for you to explore.'),
                                             
                                             h3(tags$li('About')),
-                                            h4('All questions and suggestions are welcomed. To contact to us, you need to turn to this tab to explore. The source codes of the gene fusion viewer are also available here.'),
+                                            p(style="text-align: justify;font-size:18px;line-height:20px;",
+                                              'All questions and suggestions are welcomed. To contact to us, you need to turn to this tab to explore. The source codes of the gene fusion viewer are also available here.'),
                                             
                                           ),
                                           
@@ -58,8 +69,13 @@ navbarPage("3D fusion viewer!",
                                  
                                  
                                  tabPanel("Fusions", 
+                                          p(style="text-align: justify;font-size:18px;line-height:20px;",
+                                            'Welcome to our gene fusion visualization panel! This panel has been designed to help you visualize gene fusions in a user-friendly way. Gene fusions occur when two genes are joined together, resulting in a hybrid gene that can have a variety of different effects on cellular function and disease development.'),
+                                          p(style="text-align: justify;font-size:18px;line-height:20px;",
+                                            'Our panel allows you to select the fusion group you want to visualize. You can then use our 3D visualization tools to explore the structure and function of these gene fusions, including their location, size, and impact on genes or pathways.'),
                                           
-                                          h4('Please select the fusion group and the sepecific fusion variant here:'),
+                                          p(style="text-align: justify;font-size:18px;line-height:20px;",
+                                            'Please select the fusion group and the sepecific fusion variant here:'),
                                           
                                           h4(selectInput(inputId = "fusion",
                                                       label = "Fusion group",
@@ -99,7 +115,12 @@ navbarPage("3D fusion viewer!",
                                  tabPanel("Cases", 
                                           
                                           h1("Cases"),
-                                          h4("This is the case panel"),
+                                          p(style="text-align: justify;font-size:18px;line-height:20px;",
+                                            "This is the case panel. The case panel enables you to go through the patient information in this study. You could check the patient source, sample ID from our study. "),
+                                          p(style="text-align: justify;font-size:18px;line-height:20px;",
+                                            "Based on the sample ID and the patient ID, you could know the molecular subtype, the recurrent state, WHO grade, read number, read length and the mutation load for the samples. The race, age, gender, overall survival months and censor state for the patients. "),
+                                          h4("Feel free to go through of that."),
+                                          h4(tags$hr()),
                                           h5(DT::dataTableOutput(outputId ='caseTable'))
                                           
                                           ),
