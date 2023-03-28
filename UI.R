@@ -68,9 +68,11 @@ navbarPage("3D fusion viewer!",
                                           ),
                                  
                                  
-                                 tabPanel("Fusions", 
+                                 tabPanel("Fusions",
+                                          h1("Fusions"),
+                                          h4('Welcome to our gene fusion visualization panel!'),
                                           p(style="text-align: justify;font-size:18px;line-height:20px;",
-                                            'Welcome to our gene fusion visualization panel! This panel has been designed to help you visualize gene fusions in a user-friendly way. Gene fusions occur when two genes are joined together, resulting in a hybrid gene that can have a variety of different effects on cellular function and disease development.'),
+                                            'This panel has been designed to help you visualize gene fusions in a user-friendly way. Gene fusions occur when two genes are joined together, resulting in a hybrid gene that can have a variety of different effects on cellular function and disease development.'),
                                           p(style="text-align: justify;font-size:18px;line-height:20px;",
                                             'Our panel allows you to select the fusion group you want to visualize. You can then use our 3D visualization tools to explore the structure and function of these gene fusions, including their location, size, and impact on genes or pathways.'),
                                           
