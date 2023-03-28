@@ -99,7 +99,8 @@ navbarPage("3D fusion viewer!",
                                  tabPanel("Cases", 
                                           
                                           h1("Cases"),
-                                          h4("This is the case panel")
+                                          h4("This is the case panel"),
+                                          h5(DT::dataTableOutput(outputId ='caseTable'))
                                           
                                           ),
                                  

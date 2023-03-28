@@ -8,6 +8,10 @@ GFS = read.delim('www/fusions.list.tsv')
 pdbSvgMergeDfNona = read.delim('pdbSvgMergeDfNona.csv', sep = ',')
 GFS = GFS[GFS$Fusion %in% pdbSvgMergeDfNona$name,]
 
+# add the case table
+caseTab = read.delim('www/caseTable.csv', sep = ',')
+caseTab = na.omit(caseTab)
+
 function(input, output, clientData, session) {
   
   
@@ -85,5 +89,14 @@ function(input, output, clientData, session) {
          width = w, height = h,
          alt = "My Histogram")
   }, deleteFile=FALSE)
+  
+  
+  output$caseTable = DT::renderDataTable({DT::datatable(caseTab,
+                                     options = list(scrollX = TRUE,
+                                                    pageLength = 10),
+                                     style = 'bootstrap')})
+  
+
+  
   
 }
